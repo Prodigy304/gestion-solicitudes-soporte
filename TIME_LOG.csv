@@ -3,5 +3,5 @@ A1,Diagnostico y optimizacion SQL,35,2026-11-11T18:23:56-05:00,2026-11-11T18:58:
 A2,Correccion PL/SQL transaccional,35,2026-11-11T18:58:20-05:00,2026-11-11T19:29:15-05:00,30.9,Registrado
 A3,Diagnostico y correccion controlada,25,2026-11-11T19:29:15-05:00,2026-11-11T19:48:43-05:00,19.5,Registrado
 B1,Diagnostico y correccion Java,15,2026-11-11T19:48:43-05:00,2026-11-11T20:02:03-05:00,13.3,Registrado
-B2,Pruebas y validacion,10,,,,Pendiente de registrar
-TOTAL,Presupuesto total,120,,,,Completar con duraciones reales
+B2,Pruebas y validacion,10,2026-11-11T20:02:03-05:00,2026-11-11T20:10:29-05:00,8.4,Registrado
+TOTAL,Presupuesto total,120,2026-11-11T18:23:56-05:00,2026-11-11T20:10:29-05:00,106.6,Dentro del límite
