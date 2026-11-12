@@ -1,0 +1,21 @@
+# Java build output
+target/
+*.class
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets and local configuration
+.env
+.env.*
+*.keystore
+*.jks
+
+# Local elapsed-time state
+.time-tracker.json
