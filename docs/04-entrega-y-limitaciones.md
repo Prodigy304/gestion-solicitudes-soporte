@@ -1,40 +1,33 @@
-# 4. Checklist de entrega
+# 4. Estado de la entrega y limitaciones
 
-## Antes de publicar
+## Estado de la entrega
 
-- [ ] Revisar el nombre del repositorio y su visibilidad pública.
-- [ ] Configurar la identidad Git con nombre y correo propios.
-- [ ] Ejecutar `cd java && ./run-tests.sh` y guardar el resultado.
-- [ ] Revisar todos los scripts Oracle; no ejecutar A3 sin autorización.
-- [ ] Confirmar que no haya secretos, tokens ni datos reales.
-- [ ] Revisar `TIME_LOG.csv` y completar tiempos reales; presupuesto total: 120 minutos.
-- [ ] Leer los supuestos funcionales sobre estados y reversa.
-- [ ] Ejecutar `git status`, `git diff --check` y revisar el contenido completo.
-- [ ] Crear el commit final y registrar su hash real.
-- [ ] Verificar que el repositorio se pueda clonar públicamente.
+La solución fue publicada en un repositorio público de GitHub:
 
-## Crear repositorio remoto y publicar
+- Repositorio: https://github.com/Prodigy304/gestion-solicitudes-soporte
+- Rama: main
+- Tiempo total registrado: 106.6 minutos de un presupuesto de 120 minutos.
+- Pruebas Java: 5 pruebas superadas mediante ejecución local.
 
-Desde la carpeta raíz del proyecto, después de crear un repositorio vacío en GitHub:
+El repositorio contiene los scripts SQL/PLSQL, la implementación Java, las pruebas automatizadas y la documentación técnica de las decisiones adoptadas.
 
-```bash
-git config user.name "TU NOMBRE"
-git config user.email "TU CORREO DE GIT"
-git add .
-git commit -m "feat: resolver prueba tecnica de soporte"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/gestion-solicitudes-soporte.git
-git push -u origin main
-```
+## Validaciones realizadas
 
-Si ya existe `origin`, revisar con `git remote -v` antes de agregarlo. No incluir credenciales en el repositorio.
+- Se ejecutaron las cinco pruebas Java mediante el JDK.
+- Se verificó el formato de los archivos con `git diff --check`.
+- Se realizó una revisión básica para detectar posibles secretos.
+- Se publicó la rama main en GitHub.
+- Se verificó que la rama local estuviera sincronizada con `origin/main` y que el árbol de trabajo estuviera limpio.
 
-## Datos que deben enviarse en el correo
+## Limitaciones técnicas
 
-- URL pública real del repositorio.
-- Rama evaluable (por ejemplo `main`, si esa fue la rama publicada).
-- Hash real del commit final (`git rev-parse HEAD`).
+La solución se elaboró a partir del enunciado de la prueba. No se proporcionaron el esquema DDL completo de Oracle, los datos de producción, los planes de ejecución reales ni el código fuente de la aplicación Spring/JPA.
 
-## Limitaciones conocidas
+Por esta razón:
 
-El paquete contiene una solución propuesta basada únicamente en el enunciado. No tiene acceso al esquema Oracle, datos de producción, plan de ejecución real ni código fuente Spring/JPA. La prueba automatizada Java es local y aislada. Las decisiones que dependen del catálogo de estados o la reversa se han marcado para confirmación con negocio.
+- La optimización SQL es una propuesta que requiere medición en Oracle antes de su implementación productiva.
+- Los procedimientos PL/SQL deben validarse contra el esquema real y las reglas de negocio.
+- La corrección A3 permanece desactivada por defecto y requiere aprobación funcional antes de ejecutarse.
+- La implementación Java y sus pruebas verifican la lógica de servicio de manera aislada; no constituyen pruebas de integración con Spring/JPA.
+
+Los supuestos funcionales y técnicos se encuentran documentados en `01-diagnostico-y-decisiones.md`.
